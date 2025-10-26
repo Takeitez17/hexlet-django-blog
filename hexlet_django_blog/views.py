@@ -11,4 +11,9 @@ def index(request):
     )
 
 def about(request):
-   return render(request, "about.html")
+   
+   tags = ["обучение", "программирование", "python", "oop"]
+   users = ['Тимон', 'Санек', 'Лёня']
+
+   return render(request, "about.html", context={"tags": tags,
+                                                 "users": users})

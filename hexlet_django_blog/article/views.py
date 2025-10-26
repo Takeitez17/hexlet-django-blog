@@ -3,4 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request,'articles.html')
+    articles = ['Статья о животных', 'Статья и грибах']
+    return render( request,
+                  'articles/index.html', 
+                  context={'articles':articles})

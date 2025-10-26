@@ -1,2 +1,10 @@
 <h1>О блоге</h1>
 <p>Эксперименты с Django на Хекслете</p>
+<p> {{ tags|join:', '}} </p>
+{% if users|length == 1 %}
+<p> I have one user! </p>
+{% endif %}
+
+{% for user in users %}
+<p>This is user {{ user }}</p>
+{% endfor %}
